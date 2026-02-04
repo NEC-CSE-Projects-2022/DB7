@@ -1,138 +1,171 @@
-# DB7 – Multimodal Cyberbullying Detection Using Inter-Modal-Attention-Based Deep Learning
-
-## Team Info
-
-- **22471A05O5 — Tatapudi Rajesh**  
-  LinkedIn: https://linkedin.com/in/rajesh-tatapudi  
-  **Work Done:** Complete project implementation including dataset preprocessing, BERT text pipeline, BLIP image captioning, inter-modal attention model design, training, evaluation, result analysis, API development, and full documentation. Led the entire project from design to deployment.
-
-- **22471A05N7 — Panchumarthi Lakshmi Gopinath**  
-  LinkedIn: https://linkedin.com/in/panchumarthi-gopinath  
-  **Work Done:** Helped in dataset collection, testing of modules, and preparation of presentation slides.
-
-- **23475A0511 — Chilaka Santhosh**  
-  LinkedIn: https://linkedin.com/in/santhosh-chilaka-a20544348  
-  **Work Done:** Assisted in basic UI testing and report formatting.
+# 🚀 DB7 – Multimodal Cyberbullying Detection  
+### Using Inter-Modal Attention-Based Deep Learning
 
 ---
 
-## Abstract
+## 👥 Team Information
 
-Cyberbullying on social media continues to affect users emotionally and socially, creating an urgent need for automated detection systems that can interpret both language and visuals. In this project, we designed a multimodal framework that learns from text and image data using an **inter-modal attention mechanism**.  
+### **Project Lead**
+- **Tatapudi Rajesh — 22471A05O5**  
+  🔗 [LinkedIn Profile](https://linkedin.com/in/rajesh-tatapudi)  
+  **Contribution:**  
+  - Complete end-to-end implementation  
+  - Dataset preprocessing & analysis  
+  - BERT text pipeline  
+  - BLIP image captioning integration  
+  - Inter-modal attention model design  
+  - Training, evaluation & result analysis  
+  - API development & documentation  
+  - Deployment workflow
 
-The text is represented through **BERT embeddings**, while **BLIP** is applied to generate image captions and visual context. These representations are fused and processed through **BiLSTM layers** to recognize bullying cues.  
+### Supporting Members
+- **Panchumarthi Lakshmi Gopinath — 22471A05N7**  
+  🔗 [LinkedIn Profile](https://linkedin.com/in/panchumarthi-gopinath)  
+  Contribution: Dataset collection support, module testing, presentation preparation
 
-Along with classification, the system performs:
+- **Chilaka Santhosh — 23475A0511**  
+  🔗 [LinkedIn Profile](https://linkedin.com/in/santhosh-chilaka-a20544348)  
+  Contribution: UI testing assistance and report formatting
 
+---
+
+## 📌 Abstract
+
+Cyberbullying on social media causes serious emotional and social harm, demanding intelligent automated detection systems capable of understanding **both text and images**.  
+
+This project presents a **multimodal deep learning framework** that uses:
+
+- **BERT** → textual understanding  
+- **BLIP** → image caption & visual semantics  
+- **Inter-modal Attention** → cross-modal fusion  
+- **BiLSTM** → contextual sequence learning  
+
+### Additional Capabilities
 - Input validation  
-- NSFW screening  
+- NSFW content screening  
 - Severity estimation  
-- Category assignment  
+- Category classification  
 
-Experiments on the **MMHS150K dataset** achieved:
+### Performance on MMHS150K Dataset
 
-- **Accuracy: 87.2%**  
-- **Precision: 85.6%**  
-- **Recall: 84.9%**  
-- **F1-Score: 85.2%**
+| Metric | Score |
+|------|-------|
+| Accuracy | **87.2%** |
+| Precision | **85.6%** |
+| Recall | **84.9%** |
+| F1-Score | **85.2%** |
 
-which surpass prior methods such as SAFE, MCNN, and LBP-sim.
+✔ Outperforms SAFE, MCNN, and LBP-sim baselines  
+✔ Lightweight & deployable for real-time moderation
 
 ---
 
-## Our Improvement Over Existing Paper
+## 📖 Inspiration Paper
 
-Our implementation improves earlier approaches in the following ways:
+**An inter-modal attention-based deep learning framework using unified modality for multimodal fake news, hate speech, and offensive language detection – Ayetiran & Ozgobek**  
 
-1. **Replaced OCR with BLIP captioning**
+🔗 [Paper Reference Link](https://www.sciencedirect.com/science/article/pii/S0306437924000378)
+
+---
+
+## ✨ Improvements Over Existing Work
+
+1. **BLIP instead of OCR**
+   - Cleaner semantic extraction  
    - Faster processing  
-   - Better semantic understanding  
-   - Less noise than OCR text extraction  
+   - Less noise
 
-2. **Cyberbullying-focused tuning**
-   - Handles sarcasm, slang, and coded hate  
-   - Works well on memes and indirect abuse  
+2. **Cyberbullying-specific tuning**
+   - Detects sarcasm & coded abuse  
+   - Handles memes effectively
 
-3. **Structured moderation output**
-   - JSON response with severity & category  
-   - Ready for real-time filtering systems  
+3. **Production-ready output**
+   - JSON moderation response  
+   - Severity & category tagging
 
-4. **Lightweight and deployment friendly**
-   - Reduced computational overhead  
-   - Suitable for social media platforms
+4. **Lightweight architecture**
+   - Lower computational cost  
+   - Real-time capable
 
 ---
 
-## About the Project
+## 🧠 About the Project
 
-### What the Project Does
-The system automatically detects **cyberbullying content** from social media posts by analyzing:
+### What It Does
+Analyzes social media posts containing:
+- 📝 Text  
+- 🖼 Images  
+- 🧩 Both modalities  
 
-- Text (tweets, captions, comments)  
-- Images (memes, photos)
+and predicts:
 
-It identifies:
+- Is it bullying?  
+- How severe?  
+- What category?  
 
-- Whether the post is bullying  
-- Level of severity  
-- Type of bullying category
+---
 
-### Why It Is Useful
+### Why It Matters
 
-- Assists social media moderation  
 - Protects users from online harassment  
-- Reduces manual monitoring effort  
-- Detects hidden abuse in memes and sarcasm
+- Assists moderators  
+- Reduces manual review load  
+- Understands memes + sarcasm
 
-### General Workflow
+---
+
+### System Workflow
 
 ```
-Input → Preprocessing → BERT + BLIP → Inter-Modal Attention → Classification → Output
+Input → Preprocessing  
+      → BERT (Text) + BLIP (Image)  
+      → Inter-Modal Attention  
+      → BiLSTM Classifier  
+      → Structured Output
 ```
 
 **Output Includes**
-
-- is_bullying  
+- bullying flag  
 - confidence score  
-- severity  
-- category  
+- severity level  
+- categories  
 - image description
 
 ---
 
-## Dataset Used
+## 📂 Dataset
 
-👉 **MMHS150K – Multimodal Hate Speech Dataset**  
-Dataset Link: https://www.kaggle.com/datasets/victorcallejasf/multimodal-hate-speech
+### MMHS150K – Multimodal Hate Speech Dataset  
+🔗 [Dataset Reference Link](https://www.kaggle.com/datasets/victorcallejasf/multimodal-hate-speech)
 
-### Dataset Details
+**Statistics**
 
-- Total samples: **150,000 posts**  
-- Modalities: text + images  
-- Classes: Hate / Not Hate  
+- 🧮 Total: 150,000 posts  
+- 🧩 Modalities: Text + Images  
+- 🏷 Classes: Hate / Not Hate  
 
 **Split**
 
-- Training: 134,823  
+- Train: 134,823  
 - Validation: 5,000  
-- Testing: 10,000  
+- Test: 10,000  
 
-**Class Distribution**
+**Distribution**
 
 - Hate: 44,001  
 - Not Hate: 105,999  
 
-Contains memes, sarcastic posts, abusive comments, and neutral content.
+> Includes memes, sarcasm, abusive and neutral content.
 
 ---
 
-## Dependencies Used
+## 🛠 Technologies & Dependencies
 
 - Python 3.10  
 - PyTorch  
 - HuggingFace Transformers  
 - BERT Base  
-- BLIP Image Captioning  
+- BLIP  
 - OpenCV  
 - Pillow  
 - Scikit-learn  
@@ -142,106 +175,101 @@ Contains memes, sarcastic posts, abusive comments, and neutral content.
 
 ---
 
-## EDA & Preprocessing
+## 🔎 EDA & Preprocessing
 
-### Text Preprocessing
-- Remove URLs, emojis, mentions  
+### Text Pipeline
+- URL / emoji / mention removal  
 - Lowercasing  
-- BERT tokenization  
-- Padding to 128 tokens  
-- Attention mask creation
+- BERT tokenization (128)  
+- Attention masks
 
-### Image Preprocessing
-- Resize to 224×224  
-- RGB conversion  
-- Normalization  
-- BLIP caption generation
+### Image Pipeline
+- Resize → 224×224  
+- RGB normalization  
+- BLIP captions
 
-### Input Handling
+### Input Modes
 - Text only → BERT  
 - Image only → BLIP  
-- Both → Fusion model
+- Both → Fusion
 
 ---
 
-## Model Training Info
+## 🧪 Model Training
 
-- **Text Encoder:** BERT (768-dim)  
-- **Image Encoder:** BLIP → projected to 768  
-- **Fusion:** Inter-modal attention  
-- **Classifier:** BiLSTM + Dense  
-- **Loss:** BCEWithLogits  
-- **Optimizer:** Adam  
-- **Environment:** Google Colab – Tesla T4
+| Component | Method |
+|---|---|
+| Text Encoder | BERT (768-d) |
+| Image Encoder | BLIP → 768 |
+| Fusion | Inter-modal Attention |
+| Classifier | BiLSTM + Dense |
+| Loss | BCEWithLogits |
+| Optimizer | Adam |
+| Platform | Colab – Tesla T4 |
 
 ---
 
-## Model Testing / Evaluation
+## 📊 Evaluation
 
-### Metrics Used
+### Metrics
 - Accuracy  
 - Precision  
 - Recall  
-- F1 Score  
+- F1  
 - AUC  
 - Confusion Matrix
 
 ### Ablation Study
 
-| Modality | Accuracy |
+| Setup | Accuracy |
 |---|---|
 | Text only | 82.1% |
 | Image only | 76.4% |
 | Text + Image | 84.9% |
-| Text + Image + Captions | **87.2%** |
+| + Captions | **87.2%** |
 
 ---
 
-## Results
+## 🏆 Results
 
-### Final Performance
-
-| Metric | Score |
-|------|-------|
+| Metric | Value |
+|---|---|
 | Accuracy | 0.872 |
 | Precision | 0.856 |
 | Recall | 0.849 |
-| F1 Score | 0.852 |
+| F1 | 0.852 |
 | AUC | 0.912 |
 
-### Key Strengths
-
-- Detects sarcasm & memes  
+### Strengths
+- Meme & sarcasm detection  
 - Works with missing modality  
 - Low false positives  
-- Interpretable attention maps
+- Explainable attention
 
 ---
 
-## Limitations & Future Work
+## ⚠ Limitations & Future Work
 
-### Limitations
-- Limited multilingual support  
-- Struggles with highly coded slang  
-- Dataset bias toward English
+**Limitations**
+- English-centric  
+- Struggles with extreme slang
 
-### Future Work
-- XLM-R for multilingual  
-- Explainable AI (SHAP)  
-- Model compression  
-- Cross-platform testing
+**Future**
+- XLM-R multilingual  
+- SHAP explainability  
+- Quantization  
+- Cross-platform tests
 
 ---
 
-## Deployment Info
+## 🚀 Deployment
 
 ### Features
-- REST API  
-- JSON moderation output  
+- Flask REST API  
 - NSFW filter  
 - Real-time inference
 
-### Sample Output
+### Sample Response
 
 ```json
 {
@@ -253,21 +281,14 @@ Contains memes, sarcastic posts, abusive comments, and neutral content.
 }
 ```
 
-### Usable In
-- Twitter / X moderation  
-- Instagram filters  
+### Applications
+- Social media moderation  
 - Forum monitoring  
-- College grievance cells
+- College grievance systems
 
 ---
 
-## Paper Reference
+## 👨‍💻 Developed By
 
-👉 **An inter-modal attention-based deep learning framework using unified modality for multimodal fake news, hate speech, and offensive language detection – Ayetiran & Ozgobek**  
-Link: https://www.sciencedirect.com/science/article/pii/S0306437924000378
-
----
-
-### Developed By
 **Tatapudi Rajesh – Lead Developer & Researcher**  
-LinkedIn: https://linkedin.com/in/rajesh-tatapudi
+🔗 [LinkedIn Profile](https://linkedin.com/in/rajesh-tatapudi)
