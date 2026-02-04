@@ -3,12 +3,15 @@
 ## Team Info
 
 - **22471A05O5 — Tatapudi Rajesh**  
+  LinkedIn: https://linkedin.com/in/rajesh-tatapudi  
   **Work Done:** Complete project implementation including dataset preprocessing, BERT text pipeline, BLIP image captioning, inter-modal attention model design, training, evaluation, result analysis, API development, and full documentation. Led the entire project from design to deployment.
 
 - **22471A05N7 — Panchumarthi Lakshmi Gopinath**  
+  LinkedIn: https://linkedin.com/in/panchumarthi-gopinath  
   **Work Done:** Helped in dataset collection, testing of modules, and preparation of presentation slides.
 
 - **23475A0511 — Chilaka Santhosh**  
+  LinkedIn: https://linkedin.com/in/santhosh-chilaka-a20544348  
   **Work Done:** Assisted in basic UI testing and report formatting.
 
 ---
@@ -99,7 +102,8 @@ Input → Preprocessing → BERT + BLIP → Inter-Modal Attention → Classifica
 
 ## Dataset Used
 
-👉 **MMHS150K – Multimodal Hate Speech Dataset**
+👉 **MMHS150K – Multimodal Hate Speech Dataset**  
+Dataset Link: https://www.kaggle.com/datasets/victorcallejasf/multimodal-hate-speech
 
 ### Dataset Details
 
@@ -259,9 +263,11 @@ Contains memes, sarcastic posts, abusive comments, and neutral content.
 
 ## Paper Reference
 
-**An inter-modal attention-based deep learning framework using unified modality for multimodal fake news, hate speech, and offensive language detection – Ayetiran & Ozgobek**
+👉 **An inter-modal attention-based deep learning framework using unified modality for multimodal fake news, hate speech, and offensive language detection – Ayetiran & Ozgobek**  
+Link: https://www.sciencedirect.com/science/article/pii/S0306437924000378
 
 ---
 
 ### Developed By
-**Tatapudi Rajesh – Lead Developer & Researcher**
+**Tatapudi Rajesh – Lead Developer & Researcher**  
+LinkedIn: https://linkedin.com/in/rajesh-tatapudi
