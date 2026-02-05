@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CyberGuard</title>
+    <meta name="description" content="Analytics dashboard for cyberbullying detection">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="nav-logo">CyberGuard</a>
+            <div class="nav-links">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="detection.html" class="nav-link">Detection</a>
+                <a href="report.html" class="nav-link">Report</a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="text-center">Analytics Dashboard</h1>
+            <p class="lead text-center">Monitor and analyze detection patterns</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Stats Cards -->
+                <div class="stat-card">
+                    <h3>Total Scans</h3>
+                    <p class="stat-number">1,234</p>
+                    <p class="stat-change positive">+12.5% ↑</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Threats Detected</h3>
+                    <p class="stat-number">123</p>
+                    <p class="stat-change negative">-5.2% ↓</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Accuracy Rate</h3>
+                    <p class="stat-number">98.7%</p>
+                    <p class="stat-change positive">+0.5% ↑</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Response Time</h3>
+                    <p class="stat-number">0.8s</p>
+                    <p class="stat-change neutral">0% =</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Detection Trends</h3>
+                    <canvas id="trendsChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Content Types</h3>
+                    <canvas id="typesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Replace existing footer in all HTML files -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h4>CyberGuard</h4>
+                    <p>Making the internet a safer place through AI-powered cyberbullying detection.</p>
+                    <div class="social-icons">
+                        <a href="https://github.com" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../pages/about.html">About</a></li>
+                        <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                        <li><a href="../pages/detection.html">Detection</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> support@cyberguard.com</li>
+                        <li><i class="fas fa-phone"></i> +91 91222 11188</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Narasaraopet, 522601</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 CyberGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
